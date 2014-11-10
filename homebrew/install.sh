@@ -13,6 +13,28 @@ then
 fi
 
 # Install homebrew packages
-brew install grc coreutils spark
+brew install \
+	caskroom/cask/brew-cask \
+	grc \
+	coreutils \
+       	spark \
+	pyenv \
+	tmux 
+
+# Install homebrew cask packages
+brew cask install \
+	google-chrome \
+	firefox \
+	bettertouchtool \
+	karabiner \
+	alfred \
+	flux \
+	dropbox \
+	google-drive \
+	virtualbox \
+	onepassword \
+	iTerm2 \
+	spotify 
+
 
 exit 0
