@@ -1,0 +1,6 @@
+if [[ "$SHELL" != "/usr/local/bin/zsh" ]]; then
+	echo "Changing Shell"
+     chsh -s `which zsh`
+else
+	echo "Shell is ZSH"
+fi
