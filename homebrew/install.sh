@@ -19,7 +19,8 @@ brew install \
 	coreutils \
     spark \
 	pyenv \
-	tmux
+	tmux \
+    reattach-to-user-namespace
 
 # Install homebrew cask packages
 brew cask install \
