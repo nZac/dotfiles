@@ -15,6 +15,7 @@ fi
 # Install homebrew packages
 brew install \
 	caskroom/cask/brew-cask \
+    vim \
 	grc \
 	coreutils \
     spark \
