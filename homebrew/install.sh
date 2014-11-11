@@ -17,9 +17,9 @@ brew install \
 	caskroom/cask/brew-cask \
 	grc \
 	coreutils \
-       	spark \
+    spark \
 	pyenv \
-	tmux 
+	tmux
 
 # Install homebrew cask packages
 brew cask install \
@@ -28,6 +28,7 @@ brew cask install \
 	bettertouchtool \
 	karabiner \
 	alfred \
+    caffeine \
 	flux \
 	dropbox \
 	google-drive \
