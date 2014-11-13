@@ -37,8 +37,6 @@ brew cask install \
 	virtualbox \
 	onepassword \
 	iTerm2 \
-	spotify \
-	sketchup
-
+	spotify
 
 exit 0
