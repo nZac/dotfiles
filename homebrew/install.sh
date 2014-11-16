@@ -21,6 +21,7 @@ brew install \
     spark \
 	pyenv \
 	tmux \
+    heroku-toolbelt \
     reattach-to-user-namespace
 
 # Install homebrew cask packages
