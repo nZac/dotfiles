@@ -47,6 +47,7 @@ Bundle 'fholgado/minibufexpl.vim'
 Bundle 'christoomey/vim-tmux-navigator'
 Bundle 'davidhalter/jedi-vim'
 Bundle 'ervandew/supertab'
+Bundle 'closetag.vim'
 
 " Reference Library Plugins
 Bundle 'tomtom/tlib_vim'
@@ -82,6 +83,7 @@ endif
 " GENERAL SETTINGS
 "------------------------------------------------------------------------------
 let mapleader = ";"
+syntax enable               " turn on syntax highlightingp
 set autoread                " Auto-reload changed files
 set backspace=2             " Fix backspace to not be stupid
 set colorcolumn=80          " Highlight column 80
@@ -104,7 +106,7 @@ set visualbell              " Who doesn't like a visual bell?!?
 set nobackup                " This just causes problems
 set noswapfile              " Swapfiles are more of a pain for me then they are helpful
 set cm=blowfish             " Encryption type
-set foldmethod=indent       " Fold based on the indent level
+set foldmethod=syntax       " Fold based on the indent level
 
 
 "------------------------------------------------------------------------------
@@ -120,7 +122,6 @@ set autoindent              " Turn on auto indentation
 "------------------------------------------------------------------------------
 " Syntax Highlighting and Color
 "------------------------------------------------------------------------------
-syntax on       " turn on syntax highlightingp
 set background=dark
 let g:solarized_termcolors=256
 colorscheme solarized
@@ -135,7 +136,6 @@ filetype plugin indent on
 autocmd BufNewFile,BufRead Vagrantfile set filetype=ruby " Vagrant is ruby :(
 au BufNewFile,BufRead *.j2 set filetype=htmldjango
 
-autocmd BufRead * set foldlevel=999999 " Fold nothing
 autocmd FileType rst set textwidth=80  " wrap at 80
 autocmd FileType rst set tabstop=2     " Indent by two
 autocmd FileType rst set softtabstop=2 " Indent by two

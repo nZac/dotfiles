@@ -16,27 +16,39 @@ fi
 brew install \
 	caskroom/cask/brew-cask \
     vim \
+    git \
+    hg \
 	grc \
+    xz \
 	coreutils \
     spark \
+    python \
 	pyenv \
+    pyenv-virtualenvwrapper \
 	tmux \
     heroku-toolbelt \
+    postgresql \
+    freetds \
+    libjpeg \
     reattach-to-user-namespace
 
 # Install homebrew cask packages
 brew cask install \
 	google-chrome \
 	firefox \
+    synology-assistant \
+    cyberduck \
 	bettertouchtool \
 	karabiner \
 	alfred \
     caffeine \
 	flux \
+    pgadmin3 \
 	dropbox \
 	google-drive \
 	virtualbox \
 	onepassword \
+    sourcetree \
 	iTerm2 \
 	spotify
 
