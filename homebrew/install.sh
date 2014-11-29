@@ -30,7 +30,7 @@ brew install \
     postgresql \
     freetds \
     libjpeg \
-    reattach-to-user-namespace
+    reattach-to-user-namespace --wrap-pbcopy-and-pbpaste
 
 # Install homebrew cask packages
 brew cask install \
@@ -41,6 +41,7 @@ brew cask install \
 	bettertouchtool \
 	karabiner \
 	alfred \
+    vagrant \
     caffeine \
 	flux \
     pgadmin3 \

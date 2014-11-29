@@ -1,9 +1,0 @@
-windows:
-    - name: "PENTAHO"
-      root: "~/pentaho"
-      layout: "65de,238x63,0,0{116x63,0,0[116x30,0,0,14,116x32,0,31,17],121x63,117,0[121x30,117,0,15,121x32,117,31,16]}"
-      panes:
-        - ls
-        - cd schema-workbench
-        - cd server
-        - cd data-integration
