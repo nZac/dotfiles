@@ -48,6 +48,7 @@ brew cask install \
 	dropbox \
 	google-drive \
 	virtualbox \
+    quassel-client \
 	onepassword \
     sourcetree \
 	iTerm2 \
