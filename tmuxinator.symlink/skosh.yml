@@ -1,0 +1,19 @@
+# ~/.tmuxinator/skosh.yml
+
+name: skosh
+root: ~/
+
+windows:
+  - SERVERS:
+      layout: tiled
+      panes:
+          - ls
+          - echo $SSH_AUTH_SOCK
+          - ""
+          - ""
+  - INFRA:
+      layout: main-vertical
+      panes:
+          - cd ~/j/skosh/infra
+          - cd ~/j/skosh/infra && gs
+          - cd ~/j/skosh/infra && ls

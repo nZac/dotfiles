@@ -1,7 +1,7 @@
-# ~/.tmuxinator/rrwr.yml
+# ~/.tmuxinator/level12.yml
 
-name: rrwr
-root: ~/j/
+name: level12
+root: ~/j/level12
 
 # Optional tmux socket
 # socket_name: foo
@@ -19,21 +19,10 @@ root: ~/j/
 # tmux_command: byobu
 
 windows:
-    - rrwr-repo:
+    - BCX:
         layout: main-vertical
+        pre_window: workon bcx
         panes:
-            - cd rr-web-repo && vim
-            - cd rr-web-repo && hg status
-    - rrs-data-bi:
-        layout: main-vertical
-        panes:
-            - cd rrs-data-bi && vim
-            - cd rrs-data-bi && hg status
-            - cd pentaho-vm  && vagrant status
-    - pentaho-vm:
-        layout: main-vertical
-        panes:
-            - cd pentaho-vm && vim
-            - cd pentaho-vm && vagrant status
-            - cd pentaho-vm && ls
-            - cd pentaho-vm
+            - cd bcx && vim
+            - cd bcx && hg status
+            - cd bcx && pyenv versions
