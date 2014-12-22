@@ -59,6 +59,7 @@ Bundle 'chase/vim-ansible-yaml'
 Bundle 'othree/html5.vim'
 Bundle 'hallison/vim-markdown'
 Bundle 'wting/rust.vim'
+Bundle 'nvie/vim-flake8'
 
 " Plugins that are nice in order of use
 Bundle 'scrooloose/nerdtree'
@@ -71,7 +72,6 @@ Plugin 'esneider/YUNOcommit.vim'
 
 filetype on
 Bundle 'scrooloose/nerdcommenter'
-"Bundle 'Rykka/riv.vim'
 
 if iCanHazVundle == 0
     echo "Installing Vundle packages"
