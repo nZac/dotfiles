@@ -23,6 +23,7 @@ brew install \
 	coreutils \
     spark \
     python \
+    rust \
 	pyenv \
     pyenv-virtualenvwrapper \
 	tmux \
