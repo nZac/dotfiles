@@ -1,0 +1,3 @@
+[ui]
+username = Nick Zaccardi <nicholas.zaccardi@gmail.com>
+ignore = ~/.dotfiles/hg/hgignore
