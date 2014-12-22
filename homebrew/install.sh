@@ -41,6 +41,7 @@ brew cask install \
     cyberduck \
 	bettertouchtool \
 	karabiner \
+    nvalt \
 	alfred \
     vagrant \
     caffeine \
