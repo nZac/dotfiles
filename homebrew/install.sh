@@ -53,7 +53,7 @@ brew cask install \
     quassel-client \
 	onepassword \
     sourcetree \
-	iTerm2 \
+	iterm2 \
 	spotify
 
 exit 0
