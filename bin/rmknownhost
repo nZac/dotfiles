@@ -1,0 +1,77 @@
+#!/usr/bin/env python
+
+"""A simple script to remove a known host"""
+
+import os.path
+import sys
+
+known_hosts_path = os.path.expanduser('~/.ssh/known_hosts')
+
+
+def match_hosts(needle):
+    """Find needle in known_hosts"""
+
+    matched_hosts = []
+    with open(known_hosts_path, "r") as known_hosts_file:
+        for line in known_hosts_file:
+            host, _, _ = line.split(" ")
+
+            if needle in host:
+                matched_hosts.append(host)
+
+    return matched_hosts
+
+
+def select_host(hosts):
+    """Select a particular host"""
+
+    print "Select a host to delete:\n"
+
+    for i, host in enumerate(hosts):
+
+        print "[{0}] {1}".format(i, host)
+
+    print "[X] Cancel\n"
+
+    index = raw_input("Choose a host (csv allowed): ")
+
+    if "x" in index.lower():
+        return False
+
+    return hosts[int(index)]
+
+
+def delete_host(host):
+    """Delete a particular host"""
+
+    lines = []
+    with open(known_hosts_path, "r") as f:
+        lines = f.readlines()
+
+    with open(known_hosts_path, "w") as f:
+
+        for line in lines:
+            if host != line.split()[0]:
+                f.write(line)
+
+
+if __name__ == '__main__':
+    try:
+        needle = sys.argv[1]
+
+        matched = match_hosts(needle)
+
+        if not matched:
+            sys.exit("No hosts found")
+
+        host = select_host(matched)
+
+        if not host:
+            exit("To bad we couldn't help.")
+
+        delete_host(host)
+
+        exit(0)
+
+    except IndexError, e:
+        exit("Missing input")
