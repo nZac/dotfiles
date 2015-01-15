@@ -5,3 +5,6 @@ syntax: glob
 *~
 *.db
 .vagrant
+.DS_Store
+*.css.map
+*.js.map

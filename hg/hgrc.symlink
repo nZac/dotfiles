@@ -1,3 +1,6 @@
 [ui]
 username = Nick Zaccardi <nicholas.zaccardi@gmail.com>
 ignore = ~/.dotfiles/hg/hgignore
+
+[hooks]
+pretxncommit.ansible_secret = python:$HOME/j/level12/hghooks/hooks.py:ansible_secret_hook
