@@ -23,6 +23,24 @@ windows:
         layout: main-vertical
         pre_window: workon bcx
         panes:
-            - cd bcx && vim
-            - cd bcx && hg status
-            - cd bcx && pyenv versions
+            - cd bcxins.org && vim
+            - cd bcxins.org/bcxins.org && grunt watch
+            - cd bcxins.org/bcxins.org && pyenv versions && hg status
+            - cd bcxins.org/bcxins.org/src && workon bcx && ./manage.py runserver
+            - cd ansible-vagrant && ls && hg status && workon level12-ansible-vagrant
+
+    - A-ROLES:
+        layout: main-vertical
+        pre_window: workon level12-ansible-roles
+        panes:
+            - cd ansible-roles && vim
+            - cd ansible-roles && workon level12-ansible-roles
+            - cd ansible-roles && ls && hg status && workon level12-ansible-roles
+
+    - A-VAGRANT:
+        layout: main-vertical
+        pre_window: workon level12-ansible-vagrant
+        panes:
+            - cd ansible-vagrant && vim
+            - cd ansible-vagrant && workon level12-ansible-vagrant
+            - cd ansible-vagrant && ls && hg status && workon level12-ansible-vagrant
