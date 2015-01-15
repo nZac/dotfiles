@@ -13,47 +13,51 @@ then
 fi
 
 # Install homebrew packages
-brew install \
+brew install                \
 	caskroom/cask/brew-cask \
-    vim \
-    git \
-    hg \
-	grc \
-    xz \
-	coreutils \
-    spark \
-    python \
-    rust \
-	pyenv \
+    dnsmasq                 \
+    vim                     \
+    git                     \
+    hg                      \
+	grc                     \
+    xz                      \
+	coreutils               \
+    spark                   \
+    python                  \
+    rust                    \
+	pyenv                   \
     pyenv-virtualenvwrapper \
-	tmux \
-    heroku-toolbelt \
-    postgresql \
-    freetds \
-    libjpeg \
+	tmux                    \
+    node                    \
+    heroku-toolbelt         \
+    postgresql              \
+    freetds                 \
+    libjpeg                 \
     reattach-to-user-namespace --wrap-pbcopy-and-pbpaste
 
 # Install homebrew cask packages
-brew cask install \
-	google-chrome \
-	firefox \
+brew cask install      \
+	google-chrome      \
+	firefox            \
     synology-assistant \
-    cyberduck \
-	bettertouchtool \
-	karabiner \
-    nvalt \
-	alfred \
-    vagrant \
-    caffeine \
-	flux \
-    pgadmin3 \
-	dropbox \
-	google-drive \
-	virtualbox \
-    quassel-client \
-	onepassword \
-    sourcetree \
-	iterm2 \
+    cyberduck          \
+	bettertouchtool    \
+	karabiner          \
+    nvalt              \
+	alfred             \
+    vagrant            \
+    screenhero         \
+    ynab               \
+    caffeine           \
+	flux               \
+    pgadmin3           \
+	dropbox            \
+	google-drive       \
+	virtualbox         \
+    quassel-client     \
+	onepassword        \
+    sourcetree         \
+	iterm2             \
 	spotify
 
 exit 0
