@@ -11,3 +11,9 @@ then
   echo "  Installing ruby-build for you."
   brew install ruby-build > /tmp/ruby-build-install.log
 fi
+
+if test ! $(which bundle)
+then
+  echo "  Installing bundler for you."
+  sudo gem install bundler
+fi
