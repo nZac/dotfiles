@@ -15,7 +15,9 @@ fi
 # Install homebrew packages
 brew install                \
 	caskroom/cask/brew-cask \
+    libsass                 \
     dnsmasq                 \
+    ctags                   \
     vim                     \
     git                     \
     hg                      \
@@ -58,6 +60,9 @@ brew cask install      \
 	onepassword        \
     sourcetree         \
 	iterm2             \
+    vlc                \
 	spotify
+
+brew install tunnelblick --appdir=~/Applications
 
 exit 0
