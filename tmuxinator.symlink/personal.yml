@@ -25,9 +25,3 @@ windows:
         - cd .dotfiles && vim
         - cd .dotfiles && gs
         - cd .dotfiles && ls
-  - BLOG:
-      layout: d8d7,318x75,0,0{238x75,0,0,4,79x75,239,0[79x37,239,0,5,79x37,239,38,6]}
-      panes:
-        - cd blog && vim
-        - cd blog && gs
-        - cd blog && ls

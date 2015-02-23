@@ -1,7 +1,7 @@
 # ~/.tmuxinator/skosh.yml
 
 name: skosh
-root: ~/
+root: ~/j/skosh/
 
 windows:
   - SERVERS:
@@ -14,6 +14,21 @@ windows:
   - INFRA:
       layout: main-vertical
       panes:
-          - cd ~/j/skosh/infra
-          - cd ~/j/skosh/infra && gs
-          - cd ~/j/skosh/infra && ls
+          - cd infra
+          - cd infra && gs
+          - cd infra && ls
+
+  - TFORMS:
+      layout: main-vertical
+      panes:
+          - cd toml-forms && e
+          - cd toml-forms && gs
+          - cd toml-forms && ls
+
+  - BLOG:
+      layout: d8d7,318x75,0,0{238x75,0,0,4,79x75,239,0[79x37,239,0,5,79x37,239,38,6]}
+      panes:
+        - cd skosh-blog && vim
+        - cd skosh-blog && gs
+        - cd skosh-blog && ls
+
