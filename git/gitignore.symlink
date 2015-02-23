@@ -2,3 +2,5 @@
 *~
 *.swp
 *.css.map
+*.egg*
+*.pyc
