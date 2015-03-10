@@ -39,7 +39,6 @@ Bundle 'mhinz/vim-signify'
 Bundle 'bling/vim-airline'
 Bundle 'tpope/vim-unimpaired'
 Bundle 'altercation/vim-colors-solarized'
-Bundle 'dahu/Insertlessly'
 Bundle 'kien/ctrlp.vim'
 Bundle 'tpope/vim-fugitive'
 Bundle 'tpope/vim-surround'
@@ -107,7 +106,7 @@ set visualbell              " Who doesn't like a visual bell?!?
 set nobackup                " This just causes problems
 set noswapfile              " Swapfiles are more of a pain for me then they are helpful
 set cm=blowfish             " Encryption type
-set foldmethod=syntax       " Fold based on the indent level
+set foldmethod=indent       " Fold based on the indent level
 
 
 "------------------------------------------------------------------------------
