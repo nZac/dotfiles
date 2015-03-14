@@ -8,3 +8,4 @@ pretxncommit.ansible_secret = python:$HOME/j/level12/hghooks/hooks.py:ansible_se
 [extensions]
 strip =
 eol =
+record =
