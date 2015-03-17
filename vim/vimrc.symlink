@@ -176,7 +176,7 @@ set wildignore+=*.swp         " Ignore vim backups
 "------------------------------------------------------------------------------
 " General Remappings
 "------------------------------------------------------------------------------
-inoremap jj <esc>
+inoremap jj <ESC>j
 
 " Navigating splits is much easier
 nmap <C-h> <C-w>h
@@ -198,6 +198,10 @@ map <leader>y "*y
 map <leader>p "*p
 nnoremap <leader>q :MBEbb<CR>
 nnoremap <leader>w :MBEbf<CR>
+nnoremap <leader>W <C-w>=       " Make splits even
+inoremap <leader>s <ESC>:w<CR>  " Save and drop out of insert mode
+inoremap <leader>S <C-O>:w<CR>  " Save and stay in insert mode
+nnoremap <leader>s :w<CR>       " Save from normal mode
 
 "------------------------------------------------------------------------------
 " Plugin mappings
