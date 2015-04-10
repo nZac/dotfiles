@@ -11,12 +11,18 @@ windows:
           - echo $SSH_AUTH_SOCK
           - ""
           - ""
+  - ROLES:
+      layout: main-vertical
+      panes:
+          - cd ansible-roles && e
+          - cd ansible-roles && gs
+
   - INFRA:
       layout: main-vertical
       panes:
-          - cd infra
-          - cd infra && gs
-          - cd infra && ls
+          - cd infra && e
+          - cd infra && workon skosh-ansible && gs
+          - cd infra && workon skosh-ansible && ls
 
   - TFORMS:
       layout: main-vertical
