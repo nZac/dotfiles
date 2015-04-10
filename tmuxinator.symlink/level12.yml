@@ -45,6 +45,13 @@ windows:
             - cd ansible-roles && workon level12-ansible-roles
             - cd ansible-roles && ls && hg status && workon level12-ansible-roles
 
+    - A-PLAYS:
+        layout: main-vertical
+        panes:
+            - cd ansible-playbooks && vim
+            - cd ansible-playbooks && workon level12-ansible-vagrant
+            - cd ansible-playbooks && ls && hg status && workon level12-ansible
+
     - A-VAGRANT:
         layout: main-vertical
         panes:
