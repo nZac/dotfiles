@@ -1,7 +1,16 @@
-name: level12
+name: CRV
 root: ~/j/level12
 
 windows:
+    - CRV:
+        layout: main-vertical
+        panes:
+            - cd cooksandreeves && workon crv && vim
+            - cd cooksandreeves && grunt watch
+            - cd cooksandreeves/src && workon crv && pyenv versions && hg status
+            - cd cooksandreeves/src && workon crv && ./manage.py runserver
+            - cd ansible-vagrant && ls && workon level12-ansible-vagrant
+            - cd ansible-vagrant && ls && hg status && workon level12-ansible-vagrant
 
     - A-ROLES:
         layout: main-vertical
