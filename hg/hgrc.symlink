@@ -5,7 +5,13 @@ ignore = ~/.dotfiles/hg/hgignore
 [hooks]
 pretxncommit.ansible_secret = python:$HOME/j/level12/hghooks/hooks.py:ansible_secret_hook
 
+[alias]
+undo = revert --no-backup
+
 [extensions]
 strip =
 eol =
 record =
+color =
+rebase = 
+shelve = 
