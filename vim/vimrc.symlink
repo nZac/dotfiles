@@ -179,6 +179,9 @@ set wildignore+=*.swp         " Ignore vim backups
 " Helpful escape remaps
 inoremap <leader>; <ESC>
 inoremap jj <ESC>j
+inoremap hh <ESC>h
+inoremap kk <ESC>k
+inoremap lll <ESC>l
 
 " Navigating splits is much easier
 nmap <C-h> <C-w>h
