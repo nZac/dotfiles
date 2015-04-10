@@ -22,18 +22,24 @@ windows:
     - rrwr-repo:
         layout: main-vertical
         panes:
-            - cd rr-web-repo && vim
-            - cd rr-web-repo && hg status
+          - cd rr-web-repo && vim
+          - cd rr-web-repo && hg status
     - rrs-data-bi:
         layout: main-vertical
         panes:
-            - cd rrs-data-bi && vim
-            - cd rrs-data-bi && hg status
-            - cd pentaho-vm  && vagrant status
+          - cd rrs-data-bi && vim
+          - cd rrs-data-bi && hg status
+          - cd pentaho-vm  && vagrant status
+    - rrs-stage:
+        layout: main-vertical
+        panes:
+          - cd rrwr/rrs-warehouse-stage && vim
+          - cd rrwr/rrs-warehouse-stage && hg status
+
     - pentaho-vm:
         layout: main-vertical
         panes:
-            - cd pentaho-vm && vim
-            - cd pentaho-vm && vagrant status
-            - cd pentaho-vm && ls
-            - cd pentaho-vm
+          - cd pentaho-vm && vim
+          - cd pentaho-vm && vagrant status
+          - cd pentaho-vm && ls
+          - cd pentaho-vm
