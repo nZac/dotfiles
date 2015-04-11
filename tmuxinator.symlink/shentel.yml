@@ -1,7 +1,13 @@
-name: level12
+name: Shentel
 root: ~/j/level12
 
 windows:
+    - SHENTEL:
+        layout: main-vertical
+        panes:
+            - cd shentel-enrollment && workon shentel-enrollment && e
+            - cd shentel-enrollment && workon shentel-enrollment && pyenv versions && hg status
+
     - A-ROLES:
         layout: main-vertical
         panes:
