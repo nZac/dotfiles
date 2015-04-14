@@ -5,7 +5,7 @@ windows:
     - CRV:
         layout: main-vertical
         panes:
-            - cd cooksandreeves && workon crv && vim
+            - cd cooksandreeves && workon crv && e
             - cd cooksandreeves && grunt watch
             - cd cooksandreeves/src && workon crv && pyenv versions && hg status
             - cd cooksandreeves/src && workon crv && ./manage.py runserver
@@ -15,20 +15,20 @@ windows:
     - A-ROLES:
         layout: main-vertical
         panes:
-            - cd ansible-roles && vim
+            - cd ansible-roles && e
             - cd ansible-roles && workon level12-ansible-roles
             - cd ansible-roles && ls && hg status && workon level12-ansible-roles
 
     - A-PLAYS:
         layout: main-vertical
         panes:
-            - cd ansible-playbooks && vim
+            - cd ansible-playbooks && e
             - cd ansible-playbooks && workon level12-ansible-vagrant
             - cd ansible-playbooks && ls && hg status && workon level12-ansible
 
     - A-VAGRANT:
         layout: main-vertical
         panes:
-            - cd ansible-vagrant && vim
+            - cd ansible-vagrant && e
             - cd ansible-vagrant && workon level12-ansible-vagrant
             - cd ansible-vagrant && ls && hg status && workon level12-ansible-vagrant
