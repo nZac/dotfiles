@@ -18,3 +18,10 @@ windows:
           - cd keg && gs
           - cd keg && ls
 
+  - TOOTHLESS:
+      layout: main-vertical
+      panes:
+          - cd toothless
+          - cd toothless && gs
+          - cd toothless && ls
+
