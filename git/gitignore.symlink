@@ -5,3 +5,5 @@
 *.egg*
 *.pyc
 .vagrant
+*.egg-info
+.coverage
