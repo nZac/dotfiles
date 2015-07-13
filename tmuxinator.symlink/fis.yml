@@ -1,0 +1,25 @@
+name: fis
+root: ~/j/level12/fis
+
+windows:
+    - FIS:
+        layout: main-vertical
+        panes:
+          - cd fis-residuals && workon fisresid-27 && e
+
+    - KEG:
+        layout: main-vertical
+        panes:
+          - cd ../../oss/keg && workon keg && e
+          - cd ../../oss/keg && workon keg && ls
+
+    - KEG-ELEM:
+        layout: main-vertical
+        panes:
+          - cd ../../oss/keg-elem
+
+    - TRIB:
+        layout: main-vertical
+        panes:
+          - cd ../../oss/tribune
+

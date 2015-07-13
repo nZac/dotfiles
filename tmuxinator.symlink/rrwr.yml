@@ -22,14 +22,16 @@ windows:
     - rrwr-repo:
         layout: main-vertical
         panes:
-          - cd rr-web-repo && e
-          - cd rr-web-repo && hg status
+          - cd rr-web-repo && workon rr-web-repo && e
+          - cd rr-web-repo && workon rr-web-repo && hg status
+
     - rrs-data-bi:
         layout: main-vertical
         panes:
-          - cd rrs-data-bi && e
-          - cd rrs-data-bi && hg status
-          - cd pentaho-vm  && vagrant status
+          - cd rrs-data-bi && workon rrs-data-bi && e
+          - cd rrs-data-bi && workon rrs-data-bi && hg status
+          - cd pentaho-vm  && workon rrs-data-bi && vagrant status
+
     - rrs-stage:
         layout: main-vertical
         panes:

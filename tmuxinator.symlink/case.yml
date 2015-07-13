@@ -1,0 +1,18 @@
+# ~/.tmuxinator/case.yaml
+
+name: case
+root: ~/j/oss
+
+windows:
+  - CASE:
+      layout: main-vertical
+      panes:
+          - cd case && e
+          - cd case && gs
+          - cd case && ls
+  - CITYAPP:
+      layout: main-vertical
+      panes:
+        - cd cityapp && e
+        - cd cityapp && gs
+        - cd cityapp && ls

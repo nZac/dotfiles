@@ -22,3 +22,16 @@ windows:
             - cd ansible-vagrant && e
             - cd ansible-vagrant && workon level12-ansible-vagrant
             - cd ansible-vagrant && ls && hg status && workon level12-ansible-vagrant
+
+    - VPN:
+        layout: tiled
+        panes:
+            - cd vpn/gateway && echo "GATEWAY"
+            - cd vpn/linode && echo "LINODE"
+            - cd vpn/pesonal && echo "PERSONAL"
+
+    - BLOG:
+        layout: tiled
+        panes:
+            - cd blog && e
+

@@ -1,0 +1,10 @@
+name: hllapi
+root: ~/j/level12/pai
+
+windows:
+    - PAI:
+        layout: main-vertical
+        panes:
+          - cd pai-procclient && workon pai-procclient && e
+          - cd pai-procclient && workon pai-procclient && ls
+
