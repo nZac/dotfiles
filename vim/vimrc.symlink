@@ -47,28 +47,30 @@ Bundle 'christoomey/vim-tmux-navigator'
 Bundle 'davidhalter/jedi-vim'
 Bundle 'ervandew/supertab'
 Bundle 'closetag.vim'
+Bundle 'janko-m/vim-test'
 
 " Reference Library Plugins
 Bundle 'tomtom/tlib_vim'
 Bundle 'MarcWeber/vim-addon-mw-utils'
 
 " Language Plugins
-Bundle 'davejlong/cf-utils.vim'
 Bundle 'chase/vim-ansible-yaml'
 Bundle 'othree/html5.vim'
 Bundle 'hallison/vim-markdown'
 Bundle 'wting/rust.vim'
-"Bundle 'nvie/vim-flake8'
+Bundle 'nvie/vim-flake8'
 Bundle 'cespare/vim-toml'
 
 " Plugins that are nice in order of use
 Bundle 'scrooloose/nerdtree'
 Bundle 'scrooloose/syntastic'
+Bundle 'SirVer/ultisnips'
 Bundle 'honza/vim-snippets'
 Bundle 'mattn/emmet-vim'
 Bundle 'godlygeek/tabular'
 Bundle 'Yggdroot/indentLine'
 Bundle 'majutsushi/tagbar'
+Bundle 'mtth/scratch.vim'
 
 filetype on
 Bundle 'scrooloose/nerdcommenter'
@@ -86,7 +88,7 @@ let mapleader = ";"
 syntax enable               " turn on syntax highlightingp
 set autoread                " Auto-reload changed files
 set backspace=2             " Fix backspace to not be stupid
-set colorcolumn=80          " Highlight column 80
+set colorcolumn=100          " Highlight column 80
 set cursorline              " Highlight the line of the cursor
 set confirm                 " Confirm before switching from an unsaved buffer
 set fileformat=unix         " We are a unix only shop
@@ -136,6 +138,7 @@ set guifont=Source\ Code\ Pro\ for\ Powerline\ Medium\ 10
 filetype plugin on
 filetype plugin indent on
 autocmd BufNewFile,BufRead Vagrantfile set filetype=ruby " Vagrant is ruby :(
+autocmd BufWritePre * :%s/\s\+$//e " Automatically strip whitespace on save
 au BufNewFile,BufRead *.j2 set filetype=htmldjango
 au BufNewFile,BufRead *.yaml\|*.yml set filetype=ansible
 
@@ -143,6 +146,8 @@ autocmd FileType rst set textwidth=80  " wrap at 80
 autocmd FileType rst set tabstop=2     " Indent by two
 autocmd FileType rst set softtabstop=2 " Indent by two
 autocmd FileType rst set shiftwidth=2  " Indent by two
+
+autocmd FileType python set textwidth=100  " wrap at 100 for python files
 
 "------------------------------------------------------------------------------
 " Editor Settings
@@ -152,7 +157,7 @@ autocmd VimResized * wincmd = " Make vim equalize when resized
 "------------------------------------------------------------------------------
 " Plugin  Settings
 "------------------------------------------------------------------------------
-let NERDTreeIgnore = ['\.pyc$']
+let NERDTreeIgnore = ['\.pyc$', '__pycache__']
 let NERDTreeHijackNetrw=1
 let g:riv_fold_auto_update = 0       " Turn off auto folding on save for rst files
 let g:miniBufExplBRSplit = 0         " put MBE on top
@@ -162,8 +167,16 @@ let g:ctrlp_custom_ignore = '\v[\/]\.(git|hg|svn|sass-cache|node_modules|bower_c
 let g:ctrlp_show_hidden = 1
 let g:UltiSnipsExpandTrigger="<tab>"
 let g:tagbar_autofocus = 1
+let g:tagbar_autoclose = 1
 let g:tagbar_sort = 0
 let g:tagbar_show_linenumbers = 1
+let test#python#pytest#options = {
+                                    \ 'nearest': '-x -v --pdb',
+                                    \ 'file': '-x',
+                                    \ 'suite': '--cov .coveragerc --durations=20',
+                                \}
+let g:ultisnips_python_style = 'sphinx'
+let g:UltiSnipsSnippetDirectories=["UltiSnips", $HOME."/.vim-extras/snippets"]
 
 "------------------------------------------------------------------------------
 " Tab completion setup
@@ -179,7 +192,6 @@ set wildignore+=*.swp         " Ignore vim backups
 " General Remappings
 "------------------------------------------------------------------------------
 " Helpful escape remaps
-inoremap <leader>; <ESC>
 inoremap jj <ESC>j
 inoremap hh <ESC>h
 inoremap kk <ESC>k
@@ -195,10 +207,15 @@ nmap <C-l> <C-w>l
 map j gj
 map k gk
 
+" Ctrl-a I use for my tmux commands so remap incrementing numbers
+nnoremap å <C-a>
+nnoremap ≈ <C-x>
+
+
 "------------------------------------------------------------------------------
 " Leader mappings
 "------------------------------------------------------------------------------
-nnoremap <leader>e :MBEbd<CR>   " close current buffer without closing split
+nnoremap <leader>e :MBEbw<CR>   " close current buffer without closing split
 nnoremap <leader>b <esc>:b#<CR> " Open previous buffer
 nnoremap <leader>} <esc>gq}     " Reformat paragraph
 map <leader>y "*y
@@ -219,9 +236,16 @@ nnoremap <leader>l :CtrlPLine<cr>
 nnoremap <leader>k :NERDTreeToggle<CR> " Toggle NERDTree
 nnoremap <leader>h :TagbarToggle<CR>   " Toggle Tabar
 
+nmap <silent> <leader>f :TestNearest<CR>
+nmap <silent> <leader>D :TestFile<CR>
+nmap <silent> <leader>a :TestSuite<CR>
+nmap <silent> <leader>R :TestLast<CR>
+"nmap <silent> <leader>g :TestVisit<CR>
+
 "------------------------------------------------------------------------------
 " Custom Functions
 "------------------------------------------------------------------------------
 
 " Pretty up a JSON File
 com! FormatJSON %!python -m json.tool
+com! FixLineEndings :%s///g
