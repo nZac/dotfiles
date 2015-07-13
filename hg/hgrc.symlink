@@ -9,9 +9,10 @@ pretxncommit.ansible_secret = python:$HOME/j/level12/hghooks/hooks.py:ansible_se
 undo = revert --no-backup
 
 [extensions]
-strip =
-eol =
-record =
 color =
-rebase = 
-shelve = 
+eol =
+purge =
+rebase =
+record =
+shelve =
+strip =
