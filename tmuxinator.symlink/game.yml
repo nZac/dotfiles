@@ -5,4 +5,4 @@ windows:
     - GAME:
         layout: main-vertical
         panes:
-          - cd game && workon skosh-game && e
+          - cd game && workon tonto
