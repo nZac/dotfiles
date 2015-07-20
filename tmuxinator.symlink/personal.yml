@@ -22,6 +22,4 @@ windows:
   - DOTFILES:
       layout: d8d7,318x75,0,0{238x75,0,0,4,79x75,239,0[79x37,239,0,5,79x37,239,38,6]}
       panes:
-        - cd .dotfiles && e
-        - cd .dotfiles && gs
-        - cd .dotfiles && ls
+        - cd .dotfiles

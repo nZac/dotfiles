@@ -5,13 +5,12 @@ windows:
     - FIS:
         layout: main-vertical
         panes:
-          - cd fis-residuals && workon fisresid-27 && e
+          - cd fis-residuals && workon fisresid-27
 
     - KEG:
         layout: main-vertical
         panes:
-          - cd ../../oss/keg && workon keg && e
-          - cd ../../oss/keg && workon keg && ls
+          - cd ../../oss/keg && workon keg
 
     - KEG-ELEM:
         layout: main-vertical
