@@ -88,14 +88,14 @@ let mapleader = ";"
 syntax enable               " turn on syntax highlightingp
 set autoread                " Auto-reload changed files
 set backspace=2             " Fix backspace to not be stupid
-set colorcolumn=100          " Highlight column 80
+set colorcolumn=100         " Highlight column 100
 set cursorline              " Highlight the line of the cursor
 set confirm                 " Confirm before switching from an unsaved buffer
 set fileformat=unix         " We are a unix only shop
 set hidden                  " Allow switching buffers without saving.see confirm
 set laststatus=2            " Always show two status  lines
 set listchars=tab:›\ ,eol:¬,trail:⋅ " remap hidden characters
-set number                  " Show line numbers
+set nonumber                " Don't show line numbers because they take up to much space
 set t_Co=256                " 256 colors, go iTerm 2 baby!
 set scrolloff=999           " Always keep the cursor in the middle  of the page
 set showmatch               " Highlight the opposing bracket
