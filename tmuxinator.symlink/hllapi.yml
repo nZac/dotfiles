@@ -5,6 +5,5 @@ windows:
     - PAI:
         layout: main-vertical
         panes:
-          - cd pai-procclient && workon pai-procclient && e
-          - cd pai-procclient && workon pai-procclient && ls
+          - cd pai-procclient
 

@@ -4,24 +4,7 @@ name: oss
 root: ~/j/oss/
 
 windows:
-  - DEB:
-      layout: main-vertical
-      panes:
-          - cd debops
-          - cd debops && gs
-          - cd debops && ls
-
   - KEG:
       layout: main-vertical
       panes:
           - cd keg
-          - cd keg && gs
-          - cd keg && ls
-
-  - TOOTHLESS:
-      layout: main-vertical
-      panes:
-          - cd toothless
-          - cd toothless && gs
-          - cd toothless && ls
-

@@ -5,29 +5,4 @@ windows:
     - BCX:
         layout: main-vertical
         panes:
-            - cd bcxins.org && e
-            - cd bcxins.org/bcxins.org && grunt watch
-            - cd bcxins.org/bcxins.org && pyenv versions && hg status
-            - cd bcxins.org/bcxins.org/src && workon bcx && ./manage.py runserver
-            - cd ansible-vagrant && ls && hg status && workon level12-ansible-vagrant
-
-    - A-ROLES:
-        layout: main-vertical
-        panes:
-            - cd ansible-roles && e
-            - cd ansible-roles && workon level12-ansible-roles
-            - cd ansible-roles && ls && hg status && workon level12-ansible-roles
-
-    - A-PLAYS:
-        layout: main-vertical
-        panes:
-            - cd ansible-playbooks && e
-            - cd ansible-playbooks && workon level12-ansible-vagrant
-            - cd ansible-playbooks && ls && hg status && workon level12-ansible
-
-    - A-VAGRANT:
-        layout: main-vertical
-        panes:
-            - cd ansible-vagrant && e
-            - cd ansible-vagrant && workon level12-ansible-vagrant
-            - cd ansible-vagrant && ls && hg status && workon level12-ansible-vagrant
+            - cd bcxins.org
