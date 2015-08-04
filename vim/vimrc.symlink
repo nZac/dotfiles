@@ -60,6 +60,7 @@ Bundle 'hallison/vim-markdown'
 Bundle 'wting/rust.vim'
 Bundle 'nvie/vim-flake8'
 Bundle 'cespare/vim-toml'
+Bundle 'elzr/vim-json'
 
 " Plugins that are nice in order of use
 Bundle 'scrooloose/nerdtree'
@@ -177,6 +178,7 @@ let test#python#pytest#options = {
                                 \}
 let g:ultisnips_python_style = 'sphinx'
 let g:UltiSnipsSnippetDirectories=["UltiSnips", $HOME."/.vim-extras/snippets"]
+let g:vim_json_syntax_conceal = 0
 
 "------------------------------------------------------------------------------
 " Tab completion setup

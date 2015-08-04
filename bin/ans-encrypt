@@ -1,0 +1,2 @@
+#!/usr/bin/env sh
+ansible-vault encrypt --vault-password-file=vaultpass.txt secretvars.yaml

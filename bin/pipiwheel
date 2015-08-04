@@ -1,4 +1,3 @@
 #!/bin/sh
 
-echo "$1"
-pip install --use-wheel --no-index --find-links=requirements/wheelhouse -r $1
+pip install --use-wheel --no-index --find-links=requirements/wheelhouse
