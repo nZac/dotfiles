@@ -222,8 +222,8 @@ nnoremap ≈ <C-x>
 nnoremap <leader>e :bp<CR> :bd # <CR> " close current buffer without closing split
 nnoremap <leader>b <esc>:b#<CR>       " Open previous buffer
 nnoremap <leader>} <esc>gq}           " Reformat paragraph
-map <leader>y                         " *y
-map <leader>p                         " *p
+map <leader>y "*y
+map <leader>p "*p
 nnoremap <leader>W <C-w>=             " Make splits even
 inoremap <leader>s <ESC>:w<CR>        " Save and drop out of insert mode
 inoremap <leader>S <C-O>:w<CR>        " Save and stay in insert mode
