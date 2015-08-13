@@ -5,7 +5,7 @@ windows:
     - FIS:
         layout: main-vertical
         panes:
-          - cd fis-residuals && mktmpenv && pipiwheel -q -r requirements/dev-env.txt
+          - cd fis-residuals && mktmpenv -q && pipiwheel -q -r requirements/dev-env.txt && pip install -q -e .
 
     - KEG:
         layout: main-vertical
