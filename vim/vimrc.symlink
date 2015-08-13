@@ -42,7 +42,7 @@ Bundle 'altercation/vim-colors-solarized'
 Bundle 'kien/ctrlp.vim'
 Bundle 'tpope/vim-fugitive'
 Bundle 'tpope/vim-surround'
-Bundle 'fholgado/minibufexpl.vim'
+"Bundle 'fholgado/minibufexpl.vim'
 Bundle 'christoomey/vim-tmux-navigator'
 Bundle 'davidhalter/jedi-vim'
 Bundle 'ervandew/supertab'
@@ -150,6 +150,8 @@ autocmd FileType rst set shiftwidth=2  " Indent by two
 
 autocmd FileType python set textwidth=100  " wrap at 100 for python files
 
+autocmd FileType markdown set textwidth=80  " wrap at 80
+
 "------------------------------------------------------------------------------
 " Editor Settings
 "------------------------------------------------------------------------------
@@ -217,17 +219,15 @@ nnoremap ≈ <C-x>
 "------------------------------------------------------------------------------
 " Leader mappings
 "------------------------------------------------------------------------------
-nnoremap <leader>e :MBEbw<CR>   " close current buffer without closing split
-nnoremap <leader>b <esc>:b#<CR> " Open previous buffer
-nnoremap <leader>} <esc>gq}     " Reformat paragraph
-map <leader>y "*y
-map <leader>p "*p
-nnoremap <leader>q :MBEbb<CR>
-nnoremap <leader>w :MBEbf<CR>
-nnoremap <leader>W <C-w>=       " Make splits even
-inoremap <leader>s <ESC>:w<CR>  " Save and drop out of insert mode
-inoremap <leader>S <C-O>:w<CR>  " Save and stay in insert mode
-nnoremap <leader>s :w<CR>       " Save from normal mode
+nnoremap <leader>e :bp<CR> :bd # <CR> " close current buffer without closing split
+nnoremap <leader>b <esc>:b#<CR>       " Open previous buffer
+nnoremap <leader>} <esc>gq}           " Reformat paragraph
+map <leader>y                         " *y
+map <leader>p                         " *p
+nnoremap <leader>W <C-w>=             " Make splits even
+inoremap <leader>s <ESC>:w<CR>        " Save and drop out of insert mode
+inoremap <leader>S <C-O>:w<CR>        " Save and stay in insert mode
+nnoremap <leader>s :w<CR>             " Save from normal mode
 
 "------------------------------------------------------------------------------
 " Plugin mappings

@@ -5,7 +5,7 @@ windows:
     - FIS:
         layout: main-vertical
         panes:
-          - cd fis-residuals && workon fisresid-27
+          - cd fis-residuals && mktmpenv && pipiwheel -q -r requirements/dev-env.txt
 
     - KEG:
         layout: main-vertical
