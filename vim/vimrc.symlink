@@ -181,6 +181,9 @@ let test#python#pytest#options = {
 let g:ultisnips_python_style = 'sphinx'
 let g:UltiSnipsSnippetDirectories=["UltiSnips", $HOME."/.vim-extras/snippets"]
 let g:vim_json_syntax_conceal = 0
+let g:airline#extensions#tabline#enabled = 1
+let g:airline_theme = 'bubblegum'
+
 
 "------------------------------------------------------------------------------
 " Tab completion setup
