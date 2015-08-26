@@ -1,0 +1,13 @@
+name: devops
+root: ~/j/level12/devops
+
+windows:
+    - A-ROLES:
+        layout: main-vertical
+        panes:
+            - cd ansible-roles
+
+    - A-PLAYS:
+        layout: main-vertical
+        panes:
+            - cd ansible-playbooks
