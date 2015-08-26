@@ -4,6 +4,7 @@
     fontFamily: "Menlo"
     fontSize: 15
     invisibles: {}
+    showInvisibles: true
   core:
     ignoredNames: [
       ".bundle"
@@ -22,6 +23,7 @@
       "background-tips"
       "exception-reporting"
       "metrics"
+      "vim-mode"
     ]
   "spell-check":
     grammars: [
