@@ -24,6 +24,7 @@
       "exception-reporting"
       "metrics"
       "vim-mode"
+      "whitespace"
     ]
   "spell-check":
     grammars: [

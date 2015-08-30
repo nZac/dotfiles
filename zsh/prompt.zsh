@@ -71,6 +71,12 @@ directory_name() {
   echo "%{$fg_bold[cyan]%}%1/%\/%{$reset_color%}"
 }
 
+jobs_count() {
+  local stopped=$(jobs -sp | wc -l)
+  local running=$(jobs -rp | wc -l)
+  ((running+stopped)) && echo -n "${running}r/${stopped}s "
+}
+
 export PROMPT=$'\nin $(directory_name) $(git_dirty)$(need_push)\n$ '
 set_prompt () {
   export RPROMPT="%{$fg_bold[cyan]%}%{$reset_color%}"
