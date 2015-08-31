@@ -1,0 +1,4 @@
+#!/bin/sh
+
+echo "Run the following command"
+echo "lsvirtualenv -b | grep tmp | xargs -n 1 -I {} rm -rf $WORKON_HOME/{}"
