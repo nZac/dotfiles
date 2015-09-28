@@ -8,3 +8,13 @@ windows:
       layout: main-vertical
       panes:
           - cd keg
+
+  - 6P:
+      layout: main-vertical
+      panes:
+        - cd sixpack
+
+  - TOOTH:
+      layout: main-vertical
+      panes:
+        - cd toothless

@@ -2,9 +2,9 @@
   editor:
     showIndentGuide: true
     fontFamily: "Menlo"
-    fontSize: 15
     invisibles: {}
     showInvisibles: true
+    fontSize: 13
   core:
     ignoredNames: [
       ".bundle"
