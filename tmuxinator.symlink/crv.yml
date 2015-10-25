@@ -1,8 +1,8 @@
-name: CRV
+name: crv
 root: ~/j/level12
 
 windows:
     - CRV:
         layout: main-vertical
         panes:
-            - cd cooksandreeves && workon crv
+          - cd cook-reeves && workon crv

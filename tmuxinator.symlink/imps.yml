@@ -1,0 +1,8 @@
+name: imps
+root: ~/j/level12/imps
+
+windows:
+    - BUTLER:
+        layout: main-vertical
+        panes:
+          - cd butler && mktmpenv -q && pipiwheel -q -r requirements/dev-env.txt && pip install -q -e .

@@ -12,6 +12,11 @@ windows:
         panes:
             - cd ansible-playbooks
 
+    - WHEELBUILDER:
+        layout: main-vertical
+        panes:
+          - cd wheel-builder
+
     - VPN:
         layout: main-vertical
         panes:

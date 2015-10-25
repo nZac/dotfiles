@@ -7,3 +7,5 @@
 .vagrant
 *.egg-info
 .coverage
+.cache
+.python-version

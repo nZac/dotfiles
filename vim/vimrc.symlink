@@ -48,6 +48,7 @@ Plugin 'davidhalter/jedi-vim'
 Plugin 'ervandew/supertab'
 Plugin 'closetag.vim'
 Plugin 'janko-m/vim-test'
+Plugin 'rizzatti/dash.vim'
 
 " Reference Library Plugins
 Plugin 'tomtom/tlib_vim'
@@ -166,13 +167,13 @@ autocmd VimResized * wincmd = " Make vim equalize when resized
 " Plugin  Settings
 "------------------------------------------------------------------------------
 
-let NERDTreeIgnore = ['\.pyc$', '__pycache__']
+let NERDTreeIgnore = ['\.pyc$', '__pycache__', '\.egg-info']
 let NERDTreeHijackNetrw=1
 let g:riv_fold_auto_update = 0       " Turn off auto folding on save for rst files
 let g:miniBufExplBRSplit = 0         " put MBE on top
 let g:miniBufExplBuffersNeeded = 1
 let g:ctrlp_working_path_mode = 'ra' " Set the working path to a .git folder
-let g:ctrlp_custom_ignore = '\v[\/]\.(git|hg|svn|sass-cache|node_modules|bower_components)$'
+let g:ctrlp_custom_ignore = '\v[\/]\.(git|hg|svn|sass-cache|node_modules|bower_components|tox)$'
 let g:ctrlp_show_hidden = 1
 let g:UltiSnipsExpandTrigger="<tab>"
 let g:tagbar_autofocus = 1
@@ -181,7 +182,7 @@ let g:tagbar_sort = 0
 let g:tagbar_show_linenumbers = 1
 let test#javascript#runner = 'mocha'
 let test#python#pytest#options = {
-                                    \ 'nearest': '-x -v --pdb',
+                                    \ 'nearest': '-x -s -v --pdb',
                                     \ 'file': '-x',
                                     \ 'suite': '--cov .coveragerc --durations=20',
                                 \}
@@ -222,9 +223,7 @@ map j gj
 map k gk
 
 " Ctrl-a I use for my tmux commands so remap incrementing numbers
-nnoremap å <C-a>
 nnoremap ≈ <C-x>
-
 
 "------------------------------------------------------------------------------
 " Leader mappings
@@ -253,6 +252,7 @@ nmap <silent> <leader>D :TestFile<CR>
 nmap <silent> <leader>a :TestSuite<CR>
 nmap <silent> <leader>R :TestLast<CR>
 "nmap <silent> <leader>g :TestVisit<CR>
+nmap <silent> <leader>d <Plug>DashSearch
 
 "------------------------------------------------------------------------------
 " Custom Functions
