@@ -42,13 +42,14 @@ Plugin 'flazz/vim-colorschemes'
 Plugin 'kien/ctrlp.vim'
 Plugin 'tpope/vim-fugitive'
 Plugin 'tpope/vim-surround'
-"Bundle 'fholgado/minibufexpl.vim'
+Plugin 'tpope/vim-repeat'
 Plugin 'christoomey/vim-tmux-navigator'
 Plugin 'davidhalter/jedi-vim'
 Plugin 'ervandew/supertab'
 Plugin 'closetag.vim'
 Plugin 'janko-m/vim-test'
 Plugin 'rizzatti/dash.vim'
+Plugin 'junegunn/vim-easy-align'
 
 " Reference Library Plugins
 Plugin 'tomtom/tlib_vim'
@@ -153,9 +154,7 @@ autocmd FileType rst set textwidth=80  " wrap at 80
 autocmd FileType rst set tabstop=2     " Indent by two
 autocmd FileType rst set softtabstop=2 " Indent by two
 autocmd FileType rst set shiftwidth=2  " Indent by two
-
 autocmd FileType python set textwidth=100  " wrap at 100 for python files
-
 autocmd FileType markdown set textwidth=80  " wrap at 80
 
 "------------------------------------------------------------------------------
@@ -181,16 +180,17 @@ let g:tagbar_autoclose = 1
 let g:tagbar_sort = 0
 let g:tagbar_show_linenumbers = 1
 let test#javascript#runner = 'mocha'
+
 let test#python#pytest#options = {
                                     \ 'nearest': '-x -s -v --pdb',
                                     \ 'file': '-x',
                                     \ 'suite': '--cov .coveragerc --durations=20',
                                 \}
-let g:ultisnips_python_style = 'sphinx'
-let g:UltiSnipsSnippetDirectories=["UltiSnips", $HOME."/.vim-extras/snippets"]
-let g:vim_json_syntax_conceal = 0
+let g:ultisnips_python_style             = 'sphinx'
+let g:UltiSnipsSnippetDirectories        = ["UltiSnips", $HOME."/.vim-extras/snippets"]
+let g:vim_json_syntax_conceal            = 0
 let g:airline#extensions#tabline#enabled = 1
-let g:airline_theme = 'bubblegum'
+let g:airline_theme                      = 'bubblegum'
 
 
 "------------------------------------------------------------------------------
@@ -253,6 +253,8 @@ nmap <silent> <leader>a :TestSuite<CR>
 nmap <silent> <leader>R :TestLast<CR>
 "nmap <silent> <leader>g :TestVisit<CR>
 nmap <silent> <leader>d <Plug>DashSearch
+xmap gq <Plug>(LiveEasyAlign)
+nmap gq <Plug>(LiveEasyAlign)
 
 "------------------------------------------------------------------------------
 " Custom Functions
