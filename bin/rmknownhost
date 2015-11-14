@@ -2,6 +2,7 @@
 
 """A simple script to remove a known host"""
 
+from __future__ import print_function
 import os.path
 import sys
 
@@ -25,20 +26,21 @@ def match_hosts(needle):
 def select_host(hosts):
     """Select a particular host"""
 
-    print "Select a host to delete:\n"
+    print("Select a host to delete:\n")
 
     for i, host in enumerate(hosts):
 
-        print "[{0}] {1}".format(i, host)
+        print("[{0}] {1}".format(i, host))
 
-    print "[X] Cancel\n"
+    print("[X] Cancel\n")
 
-    index = raw_input("Choose a host (csv allowed): ")
+    selections = raw_input("Choose a host (csv allowed): ")
 
-    if "x" in index.lower():
-        return False
+    if "x" in selections.lower():
+        return []
 
-    return hosts[int(index)]
+    hosts = [hosts[int(host)] for host in selections.split(',')]
+    return hosts
 
 
 def delete_host(host):
@@ -64,14 +66,14 @@ if __name__ == '__main__':
         if not matched:
             sys.exit("No hosts found")
 
-        host = select_host(matched)
+        hosts = select_host(matched)
 
-        if not host:
-            exit("To bad we couldn't help.")
-
-        delete_host(host)
+        for host in hosts:
+            delete_host(host)
 
         exit(0)
 
     except IndexError, e:
         exit("Missing input")
+    except KeyboardInterrupt, e:
+        exit(0)
