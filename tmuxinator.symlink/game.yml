@@ -1,8 +1,19 @@
 name: game
-root: ~/j/skosh/
+root: ~/j/skosh/game
 
 windows:
-    - GAME:
-        layout: main-vertical
-        panes:
-          - cd game && workon tonto
+  - CODE:
+      layout: main-vertical
+      panes:
+        - vim:
+          - workon tonto
+
+  - UTILS:
+      layout: 14ba,318x75,0,0[318x39,0,0,19,318x35,0,40{134x35,0,40,20,183x35,135,40,21}]
+      panes:
+        - psql:
+          - ls
+        - server:
+          - workon tonto
+        - util:
+          - workon tonto

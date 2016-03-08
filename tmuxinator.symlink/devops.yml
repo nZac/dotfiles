@@ -2,22 +2,32 @@ name: devops
 root: ~/j/level12/devops
 
 windows:
-    - A-ROLES:
-        layout: main-vertical
-        panes:
-            - cd ansible-roles
+  - A-ROLES:
+      layout: main-vertical
+      panes:
+          - cd ansible-roles
 
-    - A-PLAYS:
-        layout: main-vertical
-        panes:
-            - cd ansible-playbooks
+  - A-PLAYS:
+      layout: main-vertical
+      panes:
+          - cd ansible-playbooks
 
-    - WHEELBUILDER:
-        layout: main-vertical
-        panes:
-          - cd wheel-builder
+  - WHEELBUILDER:
+      layout: main-vertical
+      panes:
+        - cd wheel-builder
 
-    - VPN:
-        layout: main-vertical
-        panes:
-            - cd ../vpn
+  - LVL12:
+      layout: main-vertical
+      panes:
+        - cd ../level12-command
+
+  - VPN:
+      layout: main-vertical
+      panes:
+          - cd ../vpn
+
+  - DOCKER:
+      layout: main-vertical
+      panes:
+        - cd docker

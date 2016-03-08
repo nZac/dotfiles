@@ -1,0 +1,10 @@
+name: conatiners
+root: ~/j/containers
+
+windows:
+  - VIM:
+      layout: main-vertical
+      panes:
+        - cd docker-vim
+        - cd docker-vim
+

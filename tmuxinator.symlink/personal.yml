@@ -13,3 +13,8 @@ windows:
       layout: main-vertical
       panes:
         - cd j/blog
+
+  - COMPUTE:
+      layout: main-vertical
+      panes:
+        - cd j/compute

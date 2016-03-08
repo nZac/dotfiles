@@ -18,3 +18,8 @@ windows:
       layout: main-vertical
       panes:
         - cd toothless
+
+  - WEBGRID:
+      layout: main-vertical
+      panes:
+        - cd webgrid

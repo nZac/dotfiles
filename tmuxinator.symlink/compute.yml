@@ -1,0 +1,16 @@
+name: compute
+root: ~/j/compute
+
+windows:
+    - CODE:
+        layout: main-vertical
+        panes:
+          - code:
+            - workon compute
+
+    - SERVER:
+        layout: 14ba,318x75,0,0[318x39,0,0,19,318x35,0,40{134x35,0,40,20,183x35,135,40,21}]
+        panes:
+          - echo "Hello"
+          - workon compute && sudo salt-master
+          - workon compute

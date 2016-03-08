@@ -1,8 +1,18 @@
-name: imps
-root: ~/j/level12/imps
+name: IMPS
+root: ~/j/level12/imps/butler
 
 windows:
-    - BUTLER:
+    - CODE:
         layout: main-vertical
         panes:
-          - cd butler && mktmpenv -q && pipiwheel -q -r requirements/dev-env.txt && pip install -q -e .
+          - code:
+            - workon imps-butler
+            - pipiwheel -q -U -r requirements/dev-env.txt
+            - pip install -q -e .
+
+    - SERVER:
+        layout: 14ba,318x75,0,0[318x39,0,0,19,318x35,0,40{134x35,0,40,20,183x35,135,40,21}]
+        panes:
+          - echo "psql -h localhost -U fisresid"
+          - workon imps-butler
+          - workon imps-butler

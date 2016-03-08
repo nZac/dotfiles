@@ -63,6 +63,4 @@ brew cask install      \
     vlc                \
 	spotify
 
-brew install tunnelblick --appdir=~/Applications
-
 exit 0
