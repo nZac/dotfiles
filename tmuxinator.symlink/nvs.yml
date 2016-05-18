@@ -1,12 +1,16 @@
 name: nvs
 root: ~/j/level12/rrwr/nvs
 
+pre: rmvirtualenv rrwr-nvs && mkvirtualenv rrwr-nvs
+pre_window: workon rrwr-nvs
+startup_window: CODE
+
 windows:
     - CODE:
         layout: main-vertical
         panes:
           - code:
-            - workon "rrwr-nvs"
+
             - pipiwheel -q -U -r requirements/dev.txt
             - pip install -q -e .
 
@@ -14,6 +18,6 @@ windows:
         layout: 14ba,318x75,0,0[318x39,0,0,19,318x35,0,40{134x35,0,40,20,183x35,135,40,21}]
         panes:
           - echo ""
-          - workon "rrwr-nvs"
-          - workon "rrwr-nvs"
+          - ls
+          - gs
 

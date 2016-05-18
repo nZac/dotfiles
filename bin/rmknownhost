@@ -34,7 +34,7 @@ def select_host(hosts):
 
     print("[X] Cancel\n")
 
-    selections = raw_input("Choose a host (csv allowed): ")
+    selections = input("Choose a host (csv allowed): ")
 
     if "x" in selections.lower():
         return []
@@ -73,7 +73,7 @@ if __name__ == '__main__':
 
         exit(0)
 
-    except IndexError, e:
+    except IndexError as e:
         exit("Missing input")
-    except KeyboardInterrupt, e:
+    except KeyboardInterrupt as e:
         exit(0)

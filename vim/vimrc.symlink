@@ -162,7 +162,7 @@ augroup vimrc_autocmd
     au BufNewFile,BufRead *.yaml\|*.yml set filetype=ansible
 
     autocmd FileType javascript setlocal expandtab shiftwidth=2 tabstop=2 softtabstop=2
-    autocmd FileType html  setlocal expandtab shiftwidth=2 tabstop=2
+    autocmd FileType html  setlocal expandtab shiftwidth=2 tabstop=2 textwidth=0
     autocmd FileType rst setlocal shiftwidth=2 tabstop=2 textwidth=80 softtabstop=2
     autocmd FileType python setlocal expandtab tabstop=4 softtabstop=4 shiftwidth=4 textwidth=80 comments=b:#,fb:-,b:#:
     autocmd FileType markdown setlocal textwidth=80  " wrap at 80
@@ -194,8 +194,8 @@ let g:tagbar_show_linenumbers = 1
 let test#javascript#runner = 'mocha'
 
 let test#python#pytest#options = {
-                                    \ 'nearest': '-x -s -vv --pdb',
-                                    \ 'file': '-x',
+                                    \ 'nearest': '-x -s -vv --pdb --strict -rw',
+                                    \ 'file': '-x -s -vv --pdb --strict -rw',
                                     \ 'suite': '',
                                 \}
 
@@ -283,8 +283,8 @@ nmap <silent> <leader>fa :TestSuite<CR>
 
 nmap <silent> <leader>d <Plug>DashSearch
 
-xmap gyA <Plug>(LiveEasyAlign)
-nmap gyA <Plug>(LiveEasyAlign)
+xmap ga <Plug>(LiveEasyAlign)
+nmap ga <Plug>(LiveEasyAlign)
 
 "------------------------------------------------------------------------------
 " Custom Functions

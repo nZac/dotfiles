@@ -1,5 +1,5 @@
-name: bcx
-root: ~/j/level12/bcx/bcxins
+name: bgr
+root: ~/j/level12/bgr/bgr-src
 
 startup_window: CODE
 
@@ -8,13 +8,13 @@ windows:
         layout: main-vertical
         panes:
           - code:
-            - rmvirtualenv bcx && mkvirtualenv bcx
+            - rmvirtualenv bgr && mkvirtualenv bgr
             - pipiwheel -qUI -r requirements/dev-env.txt
             - pip install -qUI -e .
 
     - SERVER:
         layout: 14ba,318x75,0,0[318x39,0,0,19,318x35,0,40{134x35,0,40,20,183x35,135,40,21}]
         panes:
-          - psql -h localhost -U fisresid -c 'SELECT 1'
-          - sleep 10 && workon bcx
+          - psql -h localhost -U bgr -c 'SELECT 1'
+          - sleep 10 && workon bgr
           - ls

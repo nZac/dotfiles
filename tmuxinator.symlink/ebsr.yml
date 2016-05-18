@@ -1,19 +1,22 @@
 name: ebsr
-root: ~/j/level12/rrwr
+root: ~/j/level12/rrwr/ebsr
+
+pre: rmvirtualenv rrwr-ebsr && mkvirtualenv rrwr-ebsr
+pre_window: workon rrwr-ebsr
+startup_window: CODE
 
 windows:
-    - CODE:
-        layout: main-vertical
-        panes:
-          - code:
-            - workon "rrwr-ebsr"
-            - pipiwheel -q -U -r requirements/production.txt
-            - pip install -q -e .
+  - CODE:
+      layout: main-vertical
+      panes:
+        - code:
+          - pipiwheel -q -U -r requirements/dev.txt
+          - pip install -q -e .
 
-    - SERVER:
-        layout: 14ba,318x75,0,0[318x39,0,0,19,318x35,0,40{134x35,0,40,20,183x35,135,40,21}]
-        panes:
-          - echo ""
-          - workon "rrwr-ebsr"
-          - workon "rrwr-ebsr"
+  - SERVER:
+      layout: 14ba,318x75,0,0[318x39,0,0,19,318x35,0,40{134x35,0,40,20,183x35,135,40,21}]
+      panes:
+        - echo ""
+        - ls
+        - gs
 

@@ -1,12 +1,14 @@
 name: fis
 root: ~/j/level12/fis/fis-residuals
 
+startup_window: CODE
+
 windows:
     - CODE:
         layout: main-vertical
         panes:
           - code:
-            - workon fis-resid
+            - rmvirtualenv fis && mkvirtualenv fis
             - pipiwheel -qUI -r requirements/dev-env.txt
             - pip install -qUI -e .
 
@@ -14,5 +16,5 @@ windows:
         layout: 14ba,318x75,0,0[318x39,0,0,19,318x35,0,40{134x35,0,40,20,183x35,135,40,21}]
         panes:
           - psql -h localhost -U fisresid -c 'SELECT 1'
-          - workon fis-resid
-          - workon fis-resid
+          - sleep 5 && workon fis
+          - ls

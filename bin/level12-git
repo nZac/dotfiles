@@ -1,0 +1,4 @@
+#!/bin/bash -e
+
+git config --local user.email "nick.zaccardi@level12.io"
+git config --local user.signingkey 9CFBB3EA

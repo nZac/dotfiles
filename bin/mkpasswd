@@ -1,0 +1,4 @@
+#!/bin/bash
+
+# $ mkpasswd <length of pw>
+openssl rand -base64 $*

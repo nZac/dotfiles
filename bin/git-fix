@@ -1,0 +1,3 @@
+#!/bin/bash
+
+$EDITOR `git status -sb | grep ^UU | sed 's/^UU //'`
