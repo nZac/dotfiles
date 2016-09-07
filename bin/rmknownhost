@@ -34,7 +34,7 @@ def select_host(hosts):
 
     print("[X] Cancel\n")
 
-    selections = input("Choose a host (csv allowed): ")
+    selections = str(input("Choose a host (csv allowed): "))
 
     if "x" in selections.lower():
         return []
