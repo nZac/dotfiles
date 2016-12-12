@@ -124,6 +124,7 @@ set ignorecase
 set smartcase
 set incsearch
 set ttyfast
+set ttimeoutlen=0 " set how long vim waits for the command
 
 if !has('nvim')
   set cryptmethod=blowfish  " Set crypto method
@@ -208,6 +209,11 @@ let g:easytags_auto_highlight            = 0
 let g:easytags_events                    = ['BufWritePost']
 let g:easytags_async                     = 1
 
+" Change the curson in different modes
+let &t_SI = "\<Esc>Ptmux;\<Esc>\<Esc>]50;CursorShape=1\x7\<Esc>\\"
+let &t_SR = "\<Esc>Ptmux;\<Esc>\<Esc>]50;CursorShape=2\x7\<Esc>\\"
+let &t_EI = "\<Esc>Ptmux;\<Esc>\<Esc>]50;CursorShape=0\x7\<Esc>\\"
+
 
 "------------------------------------------------------------------------------
 " Tab completion setup
@@ -255,6 +261,9 @@ nnoremap <leader>b <esc>:b#<CR>
 
 " Reformat paragraph
 nnoremap <leader>} <esc>gq}
+
+" Add noqa to end of line
+nnoremap <leader>c# o# noqa<esc>kJi<space>
 
 " Make splits even
 nnoremap <leader>W <C-w>=

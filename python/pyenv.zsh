@@ -1,11 +1,9 @@
-eval "$(pyenv init -)"
+if which pyenv > /dev/null; then eval "$(pyenv init -)"; fi
 pyenv virtualenvwrapper
 
 export PYENV_ROOT="$HOME/.pyenv"
 
 export WORKON_HOME=$HOME/.virtualenvs
-
-export PYENV_VIRTUALENVWRAPPER_PREFER_PYVENV="true"
 
 export VIRTUALENVWRAPPER_WORKON_CD=0
 

@@ -1,0 +1,19 @@
+name: kegel
+root: ~/j/oss/keg-elem
+
+startup_window: CODE
+
+windows:
+    - CODE:
+        layout: main-vertical
+        panes:
+          - code:
+            - rmvirtualenv kegel && mkvirtualenv kegel
+            - pipiwheel -qUI -r requirements/runtime.txt
+            - pipiwheel -qUI -r requirements/testing.txt
+
+    - WORKSPACE:
+        layout: main-vertical
+        panes:
+          - sleep 10 && workon kegel
+          - sleep 10 && workon kegel

@@ -19,3 +19,12 @@ windows:
           - sleep 10 && workon fis
           - cd ansible && workon level12-ansible && export ANSIBLE_ROLES_PATH=~/j/level12/devops/ansible-roles
 
+    - HARVEST:
+        layout: main-vertical
+        panes:
+          - code:
+            - cd ~/j/harvest/
+            - workon harvest
+          - ops:
+            - cd ~/j/harvest/
+            - ls ~/Downloads

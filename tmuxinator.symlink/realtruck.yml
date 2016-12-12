@@ -1,0 +1,22 @@
+name: realtruck
+root: ~/j/skosh/realtruck
+
+startup_window: CODE
+
+windows:
+    - CODE:
+        layout: main-vertical
+        panes:
+          - code:
+            - ls -la
+
+    - SERVER:
+        layout: tiled
+        panes:
+          - pane_1
+          - pane_2
+          - pane_3
+          - pane_4
+
+
+

@@ -1,5 +1,5 @@
-name: keeper
-root: ~/j/skosh/keeper
+name: keg-login
+root: ~/j/oss/keg-login
 
 startup_window: CODE
 
@@ -8,13 +8,13 @@ windows:
         layout: main-vertical
         panes:
           - code:
-            - rmvirtualenv keeper && mkvirtualenv keeper
-            - pip install -r requirements/envs/dev.txt
+            - rmvirtualenv keg-login && mkvirtualenv keg-login
+            - pipiwheel -r requirements/dev-env.txt
             - pip install -qUI -e .
 
     - SERVER:
         layout: 14ba,318x75,0,0[318x39,0,0,19,318x35,0,40{134x35,0,40,20,183x35,135,40,21}]
         panes:
-          - psql -h localhost -U keeper -c 'SELECT 1'
-          - sleep 10 && workon keeper
+          - psql -h localhost -U keg-login -c 'SELECT 1'
+          - sleep 10 && workon keg-login
           - ls
