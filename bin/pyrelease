@@ -103,6 +103,7 @@ fi
 if confirm "Build Package?"; then
     rm -rf dist build
     pip --quiet install twine wheel
+    python setup.py check --strict --metadata --restructuredtext
     python setup.py --quiet sdist bdist_wheel
 
 
