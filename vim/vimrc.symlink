@@ -165,7 +165,11 @@ let g:miniBufExplBuffersNeeded = 1
 let g:ctrlp_working_path_mode = 'ra' " Set the working path to a .git folder
 let g:ctrlp_custom_ignore = '\v[\/](node_modules|target|dist|bower_components)|(\.(swp|ico|git|svn|hg|tox))$'
 let g:ctrlp_show_hidden = 1
-let g:UltiSnipsExpandTrigger="<tab>"
+let g:UltiSnipsExpandTrigger = "<tab>"
+let g:UltiSnipsJumpForwardTrigger = "<tab>"
+let g:UltiSnipsJumpBackwardTrigger = "<s-tab>"
+let g:ultisnips_python_style             = 'sphinx'
+let g:UltiSnipsSnippetDirectories        = ["UltiSnips", $HOME."/.vim-extras/snippets"]
 let g:tagbar_autofocus = 1
 let g:tagbar_autoclose = 1
 let g:tagbar_sort = 0
@@ -173,19 +177,23 @@ let g:tagbar_show_linenumbers = 1
 let test#javascript#runner = 'mocha'
 
 let test#python#pytest#options = {
-                                    \ 'nearest': '-x -s -vv --pdb --strict -rw',
-                                    \ 'file': '-x -s -vv --pdb --strict -rw',
+                                    \ 'nearest': '-x -s -vv --pudb --strict -rw',
+                                    \ 'file': '-x -s -vv --pudb --strict -rw',
                                     \ 'suite': '',
                                 \}
 
-let g:ultisnips_python_style             = 'sphinx'
-let g:UltiSnipsSnippetDirectories        = ["UltiSnips", $HOME."/.vim-extras/snippets"]
 let g:vim_json_syntax_conceal            = 0
 let g:airline#extensions#tabline#enabled = 1
 let g:airline_theme                      = 'bubblegum'
 let g:easytags_auto_highlight            = 0
 let g:easytags_events                    = ['BufWritePost']
 let g:easytags_async                     = 1
+let g:ycm_rust_src_path                  = $RUST_SRC_PATH
+let g:ycm_python_binary_path             = 'python'
+let g:ycm_key_list_select_completion     = ['<C-n>', '<Down>']
+let g:ycm_key_list_previous_completion   = ['<C-p>', '<Up>']
+let g:SuperTabDefaultCompletionType      = '<C-p>'
+let g:SuperTabCrMapping = 0
 
 " Change the curson in different modes
 let &t_SI = "\<Esc>Ptmux;\<Esc>\<Esc>]50;CursorShape=1\x7\<Esc>\\"
