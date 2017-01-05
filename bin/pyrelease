@@ -70,7 +70,7 @@ if confirm "Update changelog?"; then
     } > tmp
 
     # Allow the release manager to make any tweaks to the changelog
-    $EDITOR changelog.rst
+    $EDITOR tmp
     mv tmp changelog.rst
 fi
 
