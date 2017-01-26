@@ -1,0 +1,85 @@
+#!/bin/bash -e
+
+
+# Use the environment variable or set a default
+READLATER_STORE=${READLATER_STORE:-"$HOME/readlater.txt"}
+top=$(head -n 1 "$READLATER_STORE")
+
+usage="$(basename "$0") [-h] [-loc] [-da item] - Reading List Manager
+
+Author: Nicholas Zaccardi ({first_name}.{last_name}@gmail.com)
+License: MIT License
+
+Usage:
+    -h          print this help message
+    -l          print the reading list
+    -d [item]   remove [item] (default: first item)
+    -o          open the first item in the reading list
+    -c          copy the first item in the reading list
+    -a [item]   add [item] to the bottom of your reading list"
+
+
+open_link () {
+    open_link=${1:-"$top"};
+    echo "Opening: $open_link";
+    open "$open_link";
+    return 0;
+}
+
+copy_link () {
+    copy_link=${1:-"$top"};
+    echo "Copying: $copy_link";
+    echo "$copy_link" | pbcopy;
+    return 0;
+}
+
+list() {
+    cat "$READLATER_STORE";
+    return 0;
+}
+
+mark_done () {
+    done_link=${1:-"$top"};
+    echo "Removing: $done_link.";
+    grep -v "$done_link" "$READLATER_STORE" > "$TMPDIR/readlist.tmp";
+    mv "$TMPDIR/readlist.tmp" "$READLATER_STORE";
+    return 0;
+}
+
+remove_dups () {
+    # Remove duplicates
+    cat -n "$READLATER_STORE" | sort -uk2 | sort -nk1 | cut -f2- > "$TMPDIR/readlist.tmp"
+    mv "$TMPDIR/readlist.tmp" "$READLATER_STORE";
+}
+
+add_link () {
+    echo "Adding: $1."
+    echo "$1" >> "$READLATER_STORE"
+    remove_dups;
+    return 0;
+}
+
+while getopts ':a:ocdl h' flag; do
+  case "${flag}" in
+    h) echo "$usage"; exit ;;
+    l) list ;;
+    d) mark_done "$OPTARG" ;;
+    o) open_link "$OPTARG" ;;
+    c) copy_link "$OPTARG"  ;;
+    a) add_link "$OPTARG" ;;
+    \?)
+      echo "Invalid option: -$OPTARG" >&2
+      ;;
+    :)
+      echo "Option -$OPTARG requires an argument." >&2
+      exit 1
+      ;;
+    *) list ;;
+  esac
+done
+
+
+# If you just call the script...
+if [  $# -eq 0 ]; then
+    list
+fi
