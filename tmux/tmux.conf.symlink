@@ -34,6 +34,13 @@ bind -n C-l run "(tmux display-message -p '#{pane_current_command}' | grep -iq v
 bind -n C-\ run "(tmux display-message -p '#{pane_current_command}' | grep -iq vim && tmux send-keys 'C-\\') || tmux select-pane -l"
 bind C-a send-prefix
 
+
+# Setup resizing'
+bind -n M-h resize-pane -L 5
+bind -n M-j resize-pane -D 5
+bind -n M-l resize-pane -R 5
+bind -n M-k resize-pane -U 5
+
 # WE lovz vim!
 set-window-option -g mode-keys vi
 bind-key -t vi-copy 'v' begin-selection
